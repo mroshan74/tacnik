@@ -119,6 +119,18 @@
     padding: 5px;
 }
 
+.link:hover{
+    color: rgba(15, 145, 15, 0.774);
+}
+
+.login.link:hover{
+    color: #fff;
+}
+
+.link:active{
+    border-bottom: 1.5px solid #000;
+}
+
 
 
  /* --------- carousel ------------- */
@@ -280,7 +292,7 @@
 
 .register:hover{
     border-radius: 8px;
-    border: 1px solid #f37934;
+    border: 1px solid rgb(17, 77, 133);
 }
 
 .login {
@@ -291,8 +303,10 @@
 }
 
 .login:hover{
-    background: rgba(145, 255, 145, 0.774);
+    background: rgba(58, 139, 58, 0.774);
     border-radius: 8px;
+    color: #fff;
+    border: none;
 }
 
 #popup:focus{
@@ -304,6 +318,13 @@
     background: rgb(185, 64, 64);
     border-radius: 8px;
     color: white;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.login-out:hover{
+    color: white;
+    border: none;
 }
 
 /* --------- login ------------- */
@@ -421,13 +442,6 @@ input::-webkit-inner-spin-button {
 }
 .app-bar-contain{
     display: none;
-}
-.link:hover{
-    color: rgba(15, 145, 15, 0.774);
-}
-
-.link:active{
-    border-bottom: 1.5px solid #000;
 }
 
 @media(max-width: 991px){
