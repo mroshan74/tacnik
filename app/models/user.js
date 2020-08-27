@@ -1,38 +1,20 @@
 const mongoose = require('mongoose')
-const isEmail = require('validator/lib/isEmail')
 const bcryptjs = require('bcryptjs')
 
 const Schema = mongoose.Schema
 const userSchema = new Schema({
-    username: {
-        type: String,
-        minlength: 3,
-        maxlength: 64,
-        trim: true
-    },
-    email: {
-        type: String,
+    phone: {
+        type: Number,
         required: true,
         unique: true,
         trim: true,
-        validate: {
-            validator: function(value){
-                return isEmail(value)
-            },
-            message: function(){
-                return 'invalid Email format'
-            }
-        }
+        minlength: 10,
     },
     password: {
         type: String,
         minlength: 4,
         maxlength: 64,
         required: true
-    },
-    role: {
-        type: Number,
-        default: 0
     }
 },{timestamps: true})
 

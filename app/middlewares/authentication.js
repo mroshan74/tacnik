@@ -5,6 +5,7 @@ require('dotenv').config()
 const authenticateUser = (req,res,next) => {
     if(req.header('x-auth')){
         const token = req.header('x-auth')
+        console.log(token)
         let tokenData
         try{
             tokenData = jwt.verify(token,process.env.JWT_SECRET)
@@ -23,4 +24,4 @@ const authenticateUser = (req,res,next) => {
     }
 }
 
-module.export = authenticateUser
+module.exports = authenticateUser

@@ -11,8 +11,7 @@ authControllers.register = (req,res) => {
         .then(user => {
             res.json({
                 _id: user._id,
-                username: user.username,
-                email: user.email
+                username: user.phone,
             })
         })
         .catch(err => {
@@ -26,7 +25,7 @@ authControllers.register = (req,res) => {
 
 authControllers.login = (req,res) => {
     const { body } = req
-    User.findOne({ email: body.email })
+    User.findOne({ phone: body.phone })
         .then(user => {
             if(!user){
                 res.status(400).json({
@@ -40,9 +39,7 @@ authControllers.login = (req,res) => {
                         if(match){
                             const tokenData = {
                                 _id: user._id,
-                                username: user.username,
-                                email: user.email,
-                                role: user.role
+                                email: user.phone,
                             }
                             const token = jwt.sign(tokenData, process.env.JWT_SECRET)
                             res.json({

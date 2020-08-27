@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    margin: 40px;
+}
+
+ /* --------- department museum header ------------- */
+
+.deptOfMuseum{
+    background-color: black;
+    height: 90px;
+    width: 100%;
+}
+
+.deptOfMuseum_container{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deptOfMuseum_left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+}
+
+.deptOfMuseum_left--content{
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #fff;
+    margin: 5px;
+}
+.deptOfMuseum_left--content > h4{
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.deptOfMuseum_right{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 5px;
+}
+
+.deptOfMuseum_right > i{
+    margin: 3px;
+    padding: 2px;
+}
+
+.deptOfMuseum_right > h5{
+    font-weight: 400;
+}
+
+ /* --------- navigation ------------- */
+
+
+.nav_container{
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.nav_container > img{
+    width: 90px;
+    height: 40px;
+}
+
+.nav_container.sticky{
+    top: 0px;
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2)
+}
+
+.nav_container ul {
+    position: relative;
+    display: flex;
+}
+
+.nav_container ul li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav_container.sticky ul li {
+    color: #000;
+    padding: 8px;
+}
+
+.nav_container ul li {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px;
+}
+
+
+
+ /* --------- carousel ------------- */
+
+.carousel-container img{
+    width: 100%;
+    height: 500px;
+    margin-top: 110px;
+}
+
+.carousel-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-content-title{
+    position: absolute;
+    padding: 10px;
+    bottom: 0px;
+    font-size: 2em;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+}
+
+
+/* --------- copyright ------------- */
+
+.copyright{
+    background: #111e25;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    height: 120px;
+}
+
+.copyright > i{
+    width: 50px;
+    margin: 10px 20px;
+    font-size: 2em;
+    padding: 5px;
+}
+
+.copyright > i:hover{
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+
+.copyright > hr{
+    border: 0;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+.copyright > p {
+    margin: 5px;
+}
+
+/* --------- about ------------- */
+
+.about-container{
+    display: flex;
+    padding: 20px;
+    background: #f5f5f5;
+}
+.about-left{
+    display: flex;
+}
+
+.about-left img{
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.about-right{
+    padding: 20px;
+}
+
+.about-right h3{
+    color: #f37934;
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+.btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    border: 1px solid #f37934;
+    background: none;
+    color: #f37934;
+    margin: 30px 0;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    border: 1px solid #fff;
+    background: #fcb78fc9;
+    color: #fff;
+}
+
+/* --------- timing ------------- */
+.timing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+.timing-table{
+    display: flex;
+    
+}
+
+.visit-contain{
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+    margin: 10px;
+}
+
+.visit-cards{
+    display: flex;
+    margin: 10px;
+}
+.visit-cards > h4 {
+    padding: 10px;
+    margin: 10px;
+}
+.visit-card-rt{
+    padding: 10px;
+    margin: 10px;
+}
+
+.onVisit{
+    color: rgb(1, 153, 1);
+    font-size: 1.2em;
+}
+
+.offVisit {
+    color: rgb(250, 66, 103);
+    font-size: 1.2em;
+}
+
+.timing-right table{
+    text-align: left;
+    margin: 20px;
+}
+
+.timing-right td{
+    padding: 10px;
+}
+
+/* --------- login/register ------------- */
+
+.register{
+    border-radius: 8px;
+}
+
+.register:hover{
+    border-radius: 8px;
+    border: 1px solid #f37934;
+}
+
+.login {
+    border: 1px solid green;
+    border-radius: 8px;
+    transition: 0.5s;
+    color: white;
+}
+
+.login:hover{
+    background: rgba(145, 255, 145, 0.774);
+    border-radius: 8px;
+}
+
+#popup:focus{
+    outline: none;
+    border-radius: 10px;
+}
+
+.login-out{
+    background: rgb(185, 64, 64);
+    border-radius: 8px;
+    color: white;
+}
+
+/* --------- login ------------- */
+
+.login-container{
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.login-container input[type=number],
+.login-container input[type=password],
+.login-container input[type=text] {
+    margin: 10px;
+    width: 250px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 0;
+    border: 1px solid rgb(53, 53, 53);
+
+}
+
+.btn-login{
+    width: 180px;
+    background: none;
+    border: 0;
+    color: #000;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.btn-login:hover{
+    background:#141c2c;
+    color: #fff;
+}
+
+
+/* --------- booking ------------- */
+.bookingTable table {
+    margin: 10px;
+    padding: 5px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.bookingTable th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.bookingTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.booking-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.booking-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-form > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bool-elements{
+    width: 240px;
+    height: 30px;
+    border: 0;
+    border: 1px solid #141c2c;
+    border-radius: 5px;
+    margin: 20px;
+    padding:5px;
+}
+
+.bool-elements-select{
+    width: 240px;
+    height: 30px;
+    margin: 20px;
+}
+
+.book-title{
+    margin: 40px 70px;
+    padding: 5px;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.app-bar-contain{
+    display: none;
+}
+@media(max-width: 991px){
+    .app-bar-contain{
+        display: block;
+    }
+    .nav_container{
+        display: none;
+    }
+    .about-container{
+        flex-direction: column;
+    }
+    .about-left img{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .timing-table{
+        flex-direction: column;
+    }
+    .booking-container{
+        flex-direction: column;
+    }
+    .burger-menu{
+        position: fixed;
+        right: 0;
+        top: 100px;
+        margin: 20px;
+        padding: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        transition: 0.5s ease-in-out;
+    }
+    .burger-menu.sticky{
+        position: fixed;
+        right: 0;
+        top: 10px;
+        margin: 20px;
+        padding: 5px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .burger-menu >img {
+        filter: invert(1)
+    }
+    .appBar-drawer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .appBar-drawer ul li {
+        list-style: none;
+        cursor: pointer;
+        padding: 5px;
+        margin: 5px;
+        font-size: 1em;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 600px){
+    .header{
+        margin: 8px;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    .deptOfMuseum_left--content{
+        display: none;
+    }
+    
+}
