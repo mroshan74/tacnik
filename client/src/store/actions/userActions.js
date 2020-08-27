@@ -21,6 +21,7 @@ export const startUserLogin = (fd) => {
                 console.log(response.data)
                 let authToken = JSON.stringify(response.data)
                 localStorage.setItem('authToken', authToken)
+                window.location.reload()
             })
             .catch(err => console.log(err))
     }

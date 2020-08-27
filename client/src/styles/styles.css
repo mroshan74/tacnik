@@ -478,6 +478,9 @@ input::-webkit-inner-spin-button {
         font-size: 1em;
         font-weight: 500;
     }
+    .login{
+        color :#000;
+    }
 }
 
 @media (max-width: 600px){

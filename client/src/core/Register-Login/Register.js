@@ -24,6 +24,7 @@ class Register extends Component {
     }
     console.log(formData)
     this.props.dispatch(startUserRegister(formData))
+    this.props.handleModalsStatus()
     this.setState({
         phone: '',
         password: '',

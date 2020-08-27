@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Booking from './Booking'
+import {isSignedIn} from '../../auth/isAuth'
 
 function Timing() {
     return (
@@ -51,10 +52,12 @@ function Timing() {
                 </div>
             </div>
         </section>
-        <div className='bookingDate'>
+        {isSignedIn() && 
+            <div className='bookingDate'>
             <h3 className="book-title">Book a slot</h3>
             <Booking />
         </div>
+        }
     </Fragment>
     )
 }

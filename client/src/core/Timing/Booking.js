@@ -10,7 +10,7 @@ function Booking(props) {
     const {bookings} = props
     const [startDate, setStartDate] = useState(new Date())
     const [time, setTime] = useState({ value: '9:00 AM', label: '9:00 AM' })
-    const [bookedFor, setBookedFor] = useState(1)
+    const [bookedFor, setBookedFor] = useState("")
     const options = [
         { value: '9:00 AM', label: '9:00 AM' },
         { value: '11:00 AM', label: '11:00 AM' },

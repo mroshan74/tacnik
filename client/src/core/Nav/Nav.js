@@ -31,14 +31,14 @@ function Nav() {
                         <li className='link register' onClick={
                             () => {
                                 handleModalStatus()
-                                setComponent(<Register/>)
+                                setComponent(<Register handleModalStatus={handleModalStatus}/>)
                             }
                             }>REGISTER</li>
                         }
                     {!isSignedIn() && 
                         <li className='link login' onClick={() => {
                             handleModalStatus()
-                            setComponent(<Login/>)
+                            setComponent(<Login handleModalStatus={handleModalStatus}/>)
                             }}>LOGIN</li>
                     }
                     {isSignedIn() && 
