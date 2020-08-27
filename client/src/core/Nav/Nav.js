@@ -11,14 +11,20 @@ function Nav() {
     const handleModalStatus = () => {
         setModalStatus(!modalStatus)
     }
+    const handleCloseModal = () => {
+        setModalStatus(false)
+    }
     const handleLogOut = () => {
         localStorage.removeItem('authToken')
         window.location.href = '/'
     }
+    const handleDisableClick = (e) => {
+        e.preventDefault()
+    }
     return (
         <div>
             <ResNav />
-            <header className='nav_container'>
+            <header className='nav_container' contextMenu='navContest' onContextMenu={handleDisableClick}>
                 <img src={require('../../resources/icons/logo.png')} alt="logo"/>
                 <ul className='menu'>
                     <li className='link'>HOME</li>
@@ -30,15 +36,15 @@ function Nav() {
                     {!isSignedIn() &&
                         <li className='link register' onClick={
                             () => {
-                                handleModalStatus()
-                                setComponent(<Register handleModalStatus={handleModalStatus}/>)
+                                {!modalStatus && handleModalStatus()}
+                                setComponent(<Register handleModalStatus={handleCloseModal}/>)
                             }
                             }>REGISTER</li>
                         }
                     {!isSignedIn() && 
                         <li className='link login' onClick={() => {
-                            handleModalStatus()
-                            setComponent(<Login handleModalStatus={handleModalStatus}/>)
+                            {!modalStatus && handleModalStatus()}
+                            setComponent(<Login handleModalStatus={handleCloseModal} />)
                             }}>LOGIN</li>
                     }
                     {isSignedIn() && 

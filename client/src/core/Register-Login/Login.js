@@ -23,10 +23,11 @@ class Login extends Component {
       password,
     }
     this.props.dispatch(startUserLogin(formData))
-    this.props.handleModalsStatus()
     this.setState({
       phone: '',
       password: ''
+    },() => {
+      this.props.handleModalStatus()
     })
     console.log(formData)
   }

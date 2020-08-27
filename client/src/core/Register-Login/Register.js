@@ -15,6 +15,7 @@ class Register extends Component {
       show: !prevState.show,
     }))
   }
+  
   handleSubmit = (e) => {
     e.preventDefault()
     const { phone, password } = this.state
@@ -24,10 +25,11 @@ class Register extends Component {
     }
     console.log(formData)
     this.props.dispatch(startUserRegister(formData))
-    this.props.handleModalsStatus()
     this.setState({
         phone: '',
         password: '',
+    },() => {
+      this.props.handleModalStatus()
     })
   }
   render() {
