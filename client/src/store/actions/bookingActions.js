@@ -15,11 +15,16 @@ export const startGetBookings = () => {
     }
 }
 
+export const addNewBooking = (data) => {
+    return { type: 'NEW_BOOKING', payload: data}
+}
+
 export const startCreateBooking = (fd) => {
-    return() => {
+    return(dispatch) => {
         axios.post('/users/bookings/create',fd)
             .then(response => {
                 console.log(response.data)
+                dispatch(addNewBooking(response.data))
             })
             .catch(err => console.log(err))
     }

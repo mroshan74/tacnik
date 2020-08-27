@@ -5,6 +5,9 @@ const bookingReducers = (state = bookingInitialState, action) => {
         case 'SET_BOOKINGS': {
             return state = action.payload
         }
+        case 'NEW_BOOKING': {
+            return state.concat(action.payload)
+        }
         default: {
             return state
         }

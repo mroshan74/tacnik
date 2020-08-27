@@ -422,6 +422,14 @@ input::-webkit-inner-spin-button {
 .app-bar-contain{
     display: none;
 }
+.link:hover{
+    color: rgba(15, 145, 15, 0.774);
+}
+
+.link:active{
+    border-bottom: 1.5px solid #000;
+}
+
 @media(max-width: 991px){
     .app-bar-contain{
         display: block;

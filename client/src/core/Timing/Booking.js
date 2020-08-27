@@ -33,6 +33,7 @@ function Booking(props) {
         }
         props.dispatch(startCreateBooking(formData))
         console.log(formData)
+        setBookedFor('')
     }
     const checkBookings = (date) => {
         const booksOnDate = bookings.filter(book => moment(date).format('DD-MM-YYYY') == moment(book.booked).format('DD-MM-YYYY'))
