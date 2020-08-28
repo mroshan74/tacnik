@@ -23,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.0",
     "morgan": "^1.10.0",
+    "sweetalert2": "^9.17.1",
     "validator": "^13.1.1"
   }
 }

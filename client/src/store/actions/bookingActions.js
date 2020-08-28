@@ -1,4 +1,5 @@
 import axios from '../../config/axios'
+import Swal from 'sweetalert2'
 
 export const setBookings = (data) => {
     return { type: 'SET_BOOKINGS', payload: data}
@@ -24,6 +25,10 @@ export const startCreateBooking = (fd) => {
         axios.post('/users/bookings/create',fd)
             .then(response => {
                 console.log(response.data)
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Booked Successfully!'
+                })
                 dispatch(addNewBooking(response.data))
             })
             .catch(err => console.log(err))

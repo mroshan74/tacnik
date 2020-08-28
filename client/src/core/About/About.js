@@ -5,6 +5,7 @@ function About() {
         <section className="about">
             <h2 className="header">About</h2>
             <div className="about-container">
+                <div className="skewBox">
                 <div className="about-left">
                     <img src={require('../../resources/assets/museum/museum-img.jpg')} alt="img"/>
                 </div>
@@ -18,6 +19,7 @@ function About() {
                         </p>
                         <button className="btn">Read More</button>
                     </div>
+                </div>
                 </div>
             </div>
         </section>

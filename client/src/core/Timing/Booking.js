@@ -4,7 +4,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import Select from 'react-select'
 import { connect } from 'react-redux'
 import moment from 'moment'
-import { startCreateBooking } from '../../store/actions/bookingActions';
+import { startCreateBooking } from '../../store/actions/bookingActions'
+import { TextField } from '@material-ui/core'
 
 function Booking(props) {
     const {bookings} = props
@@ -80,17 +81,25 @@ function Booking(props) {
                 dateFormat="MMMM d, yyyy"
                 minDate={new Date()}
                 highlightDates={bookings.map(books => new Date(books.booked))}
-                className='bool-elements'
+                className='book-elements-date'
             />
             <form onSubmit={handleBookSubmit}>
-                <input className='bool-elements' type='number' placeholder="No. of people" onChange={handleChange} value={bookedFor} />
+                <TextField 
+                    variant='outlined'
+                    label='No. of people'
+                    className='book-elements-input' 
+                    type='number' 
+                    placeholder="No. of people" 
+                    onChange={handleChange} 
+                    value={bookedFor} 
+                />
                 <Select 
                     value={time}
                     options={options}
                     onChange={handleTime}
-                    className='bool-elements-select'
+                    className='book-elements-select'
                 />
-                <input className='btn-login' type="submit" value="Book"/>
+                <input className='btn-login book-btn' type="submit" value="Book"/>
             </form>
             </div>
             {checkBookings(startDate)}

@@ -1,4 +1,5 @@
 import axios from '../../config/axios'
+import Swal from 'sweetalert2'
 
 // ----- register user
 
@@ -7,6 +8,10 @@ export const startUserRegister = (fd) => {
         axios.post('/users/register',fd)
             .then(response => {
                 console.log(response.data)
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Registered Successfully!'
+                })
             })
             .catch(err => console.log(err))
     }
@@ -21,7 +26,13 @@ export const startUserLogin = (fd) => {
                 console.log(response.data)
                 let authToken = JSON.stringify(response.data)
                 localStorage.setItem('authToken', authToken)
-                window.location.reload()
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Login Successful!'
+                })
+                setTimeout(() => {
+                    window.location.reload()
+                },2000)
             })
             .catch(err => console.log(err))
     }

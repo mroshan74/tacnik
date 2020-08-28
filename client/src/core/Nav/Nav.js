@@ -4,6 +4,7 @@ import Login from '../Register-Login/Login'
 import Register from '../Register-Login/Register'
 import { isSignedIn } from '../../auth/isAuth'
 import ResNav from './ResNav'
+import Swal from 'sweetalert2'
 
 function Nav() {
     const [modalStatus,setModalStatus] = useState(false)
@@ -16,7 +17,13 @@ function Nav() {
     }
     const handleLogOut = () => {
         localStorage.removeItem('authToken')
-        window.location.href = '/'
+        Swal.fire({
+            icon: 'success',
+            title: 'Logged Out'
+        })
+        setTimeout(() => {
+            window.location.href = '/'
+        },800)
     }
     const handleDisableClick = (e) => {
         e.preventDefault()
@@ -36,14 +43,14 @@ function Nav() {
                     {!isSignedIn() &&
                         <li className='link register' onClick={
                             () => {
-                                {!modalStatus && handleModalStatus()}
+                                handleModalStatus()
                                 setComponent(<Register handleModalStatus={handleCloseModal}/>)
                             }
                             }>REGISTER</li>
                         }
                     {!isSignedIn() && 
                         <li className='link login' onClick={() => {
-                            {!modalStatus && handleModalStatus()}
+                            handleModalStatus()
                             setComponent(<Login handleModalStatus={handleCloseModal} />)
                             }}>LOGIN</li>
                     }

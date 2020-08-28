@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { startUserLogin } from '../../store/actions/userActions'
+import { TextField } from '@material-ui/core'
 
 class Login extends Component {
   state = {
@@ -38,7 +39,10 @@ class Login extends Component {
         <h4>Login</h4>
           <form className='login-form' onSubmit={this.handleSubmit}>
             <div className='form-control'>
-              <input
+              <TextField
+                className='login-input-ele'
+                variant='outlined'
+                label='Phone'
                 type='number'
                 name='phone'
                 id='phone'
@@ -49,7 +53,10 @@ class Login extends Component {
             </div>
 
             <div className='form-control'>
-              <input
+              <TextField
+                className='login-input-ele'
+                variant='outlined'
+                label='Password'
                 type={this.state.show ? 'text' : 'password'}
                 name='password'
                 id='password'
@@ -71,7 +78,7 @@ class Login extends Component {
                 <label htmlFor='show'>Show password</label>
               </div>
             </div>
-            <input className='btn-login' type='submit' value='Sign In' />
+            <input className='btn-login login-btn' type='submit' value='Sign In' />
           </form>
         </div>
       </div>
