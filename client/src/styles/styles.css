@@ -328,7 +328,7 @@
 }
 
 .entry-charge{
-    height: 500px;
+    height: 720px;
     width: 100%;
     margin: 120px 50px 50px 0;
     padding: 0 120px;
@@ -338,16 +338,18 @@
 .pay-svg{
     position: absolute;
     width: 400px;
-    top: -100px;
-    left: 350px;
+    top: -20px;
+    left: 300px;
     height: 600px;
     z-index: -999;
+    transition: left 0.5s ease-in-out;
 }
 
 .timing-right{
     border: 6px solid #4742a5;
     position: absolute;
     right: 400px;
+    top: 90px;
     padding: 30px;
     width: 600px;
     border-radius: 8px;
@@ -601,6 +603,12 @@ input::-webkit-inner-spin-button {
     margin: 10px;
 }
 
+@media(max-width: 1600px){
+    .pay-svg{
+        left: 20px;
+    }
+}
+
 @media(max-width: 1200px){
     .app-bar-contain{
         display: block;
@@ -608,6 +616,9 @@ input::-webkit-inner-spin-button {
     }
     .nav_container{
         display: none;
+    }
+    .about{
+        margin-top: 20px;
     }
     .about-container{
         flex-direction: column;
